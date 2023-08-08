@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card-product mt-3">
+    <%= image_tag "http://source.unsplash.com/featured/?#{@pet.species}>&#{rand(1000)}" %>
+    <div class="card-product-infos">
+      <h2><%= @pet.name %></h2>
+      <p><%= @pet.address %></p>
+      <p>Found <%= pluralize(@pet.found_days_ago, 'day') %> ago</p>
+    </div>
+  </div>
+  <p><%= link_to 'Back', pets_path, class: 'btn btn-light'  %></p>
+</div>
